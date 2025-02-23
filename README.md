@@ -22,7 +22,7 @@
   - https://www.kbchachacha.com/
  2. SK엔카
   - https://car.encar.com/
- 3. zkqkwh
+ 3. 카바조
   - https://www.carvazo.com/
 
 ## MySQL 데이터베이스 생성 및 사용자 생성
