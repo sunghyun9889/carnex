@@ -197,6 +197,7 @@ CREATE TABLE reservation_tbl (
  <b>1. 회원가입</b>
  ![image](https://github.com/user-attachments/assets/f6af8f9f-d720-4bb7-b565-92ba7ed726ac)
  - 회원가입 시 입력한 비밀번호는 Spring Security으로 인코딩되어 DB에 저장됩니다.
+   
  ![image](https://github.com/user-attachments/assets/8b7750a5-f90b-48af-bf13-1eb5f11b141a)
 
  
@@ -208,74 +209,81 @@ CREATE TABLE reservation_tbl (
  ![image](https://github.com/user-attachments/assets/93fa138d-4562-4f63-81d6-877ca3fbc866)
 
  
- <b>4. 로그아웃</b>
- 
- <b>5. 유저메인페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106241659-c14b3c00-6249-11eb-90f6-c3230a020bb4.png)
- - Carousel을 활용하였습니다.
- - grid Layout을 활용하였습니다.
- 
- <b>6. 상단바 차종별 검색</b>
- ![image](https://user-images.githubusercontent.com/63082842/106241762-ec359000-6249-11eb-8d99-5bc8ca0e8397.png)
- - SELECT문을 활용하여 company 테이블의 모든 회사명을 불러옵니다. (회사가 추가되어도 따로 수정할 필요가 없습니다.)
- - 모든 페이지에 header와 상단바가 존재하여, filter를 사용하여 모든 페이지에서 사용할 수 있게 하였습니다.
- 
- <b>7. 차종별 상품 페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106244992-19387180-624f-11eb-9255-987a3590edcc.png)
- 
- <b>8. 전체 차량 페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245244-82b88000-624f-11eb-9771-98bec7015d12.png)
- - 검색어를 포함하고 있는 상품명과 회사의 모든 결과를 보여줍니다.
+ <b>4. 유저메인페이지</b>
+ ![image](https://github.com/user-attachments/assets/49e2b079-f313-4ac8-ba90-e54d4e61c39f)
+ - FlexSlider를 활용하였습니다.
 
- <b>9. 게시판 페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106244815-d8d8f380-624e-11eb-9eee-7b886d0f8d06.png)
- - 유저가 상품을 구매하면 product 테이블의 구매수가 오르게 되고, ORDER BY soldCount DESC을 사용하여 판매량 순으로 조회한 결과입니다.
-
- <b>10. 검색기능</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245360-aa0f4d00-624f-11eb-9e85-1a0315e1bb34.png)
- - 좌측에 라디오박스의 브랜드 중 클릭된 브랜드의 상품만 보는 기능입니다.
  
- <b>11. 로그인 시 상단 메뉴 추가</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245552-f8245080-624f-11eb-9a16-4b307b6884c4.png)
- - 유저의 등급이 admin 이상이면 상품등록, 상품수정 메뉴가 생깁니다.
- - 유저의 등급이 기본 이상이면 찜, 장바구니, 정보수정, 로그아웃 메뉴가 생깁니다.
-
- <b>12. 정보수정 클릭 시 비밀번호 재확인</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245663-2c980c80-6250-11eb-9caa-fb189732be99.png)
- - 유저가 자신이 설정한 비밀번호를 입력하면, 입력받은 값을 SHA-256 인코딩을 적용하여 DB에 저장된 값과 비교합니다.
-
- <b>13. 회원정보 수정</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245704-3faadc80-6250-11eb-93c0-20da739c78c3.png)
-
- <b>14. 회원 마이페이지</b>
- ![image](https://user-images.githubusercontent.com/63082842/106245704-3faadc80-6250-11eb-93c0-20da739c78c3.png)
+ <b>5. 메인페이지 내 필터 검색</b>
+ ![image](https://github.com/user-attachments/assets/2407245e-b0fd-406a-a96e-c0f5a97f0b78)
+ - 차량등록시 지정한 차종의 데이터로 선택한 모든 차종을 불러옵니다. (매물이 추가되어도 따로 수정할 필요가 없습니다.)
  
- <b>15. 상세상품 페이지 - 상단</b>
- ![image](https://user-images.githubusercontent.com/63082842/106246754-f491c900-6251-11eb-8b09-4ef661d833be.png)
- - product 테이블의 값을 select 하여 보여줍니다.
- - 바로구매 버튼 클릭 시 결제페이지로 이동합니다. (로그인 시에만)
- - 장바구니 버튼 클릭 시 장바구니에 추가됩니다. (로그인 시에만)
- - 찜 버튼 클릭 시 찜목록에 추가됩니다. (로그인 시에만)
- ![image](https://user-images.githubusercontent.com/63082842/106248073-d0cf8280-6253-11eb-9bcc-60baca222f17.png)
-  - 로그인 상태에서 버튼 클릭 시
- ![image](https://user-images.githubusercontent.com/63082842/106248122-e2188f00-6253-11eb-8e80-7bfa532fc7ed.png)
-  - 비로그인 상태에서 버튼 클릭 시
-  - 회원가입 클릭 시 회원가입 페이지로 이동합니다.
  
- <b>16. 계약하기</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247326-b5b04300-6252-11eb-854d-2dd2896be434.png)
- - 비밀번호 확인 후 일치하면 상세 페이지로 이동합니다.
- 
- <b>17. 어드민 부터 대시보드</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
- - 보고있던 상품 내용을 함께 불러오며, 상품 사진 클릭 시 상품 페이지로 이동할 수 있습니다.
+ <b>6. 차종별 상품 페이지</b>
+ ![image](https://github.com/user-attachments/assets/cb621893-9750-4a44-afff-4620492d26cb)
+ - 차량등록시 지정한 차종의 데이터로 선택한 모든 차종을 불러옵니다. (매물이 추가되어도 따로 수정할 필요가 없습니다.)
 
- <b>18. 회원관리</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
+ 
+ <b>7. 전체 차량 페이지</b>
+ ![image](https://github.com/user-attachments/assets/0232af7c-303d-465c-90e4-85d11fb8e6aa)
+ - 모든 결과를 보여줍니다.
+
+
+ <b>8. 게시판 페이지</b>
+ ![image](https://github.com/user-attachments/assets/732e10c5-4aca-4f79-9a76-9e20073edc5c)
+ - PageDTO를 설계하여 페이징 처리 하였습니다.
+
+
+ <b>9. 필터검색기능</b>
+ ![image](https://github.com/user-attachments/assets/7e4684eb-d7f7-46d2-bd0e-5763a68f8526)
+ - 검색타입, 키워드를 활용하여 게시글 제목 또는 작성자 필터검색이 가능합니다.
+
+ 
+ <b>10. 로그인 시 상단 메뉴 변경</b>
+ ![image](https://github.com/user-attachments/assets/2ebe91d6-23c0-4810-a792-ad5e17d01260)
+ - 유저가 로그인 시 기존 로그인/회원가입 버튼에서 마이페이지, 로그아웃으로 변경됩니다.
+ - 비회원 등급 유저는 매물검색, 게시판 등 페이지는 노출되지 않습니다.
+   
+
+ <b>11. 정보수정 클릭 시 비밀번호 재확인</b>
+ ![image](https://github.com/user-attachments/assets/22ce82fb-57bb-49f2-8d2f-5b4c4e95d433)
+ - 유저가 자신이 설정한 비밀번호를 입력하면, DB에 저장된 값을 디코딩하여 입력받은 값과 비교합니다.
+
+
+ <b>12. 회원정보 수정</b>
+ ![image](https://github.com/user-attachments/assets/1fb83c70-b18f-4a2d-8d66-32fd342d4e40)
+
+
+ <b>13. 회원 마이페이지</b>
+ ![image](https://github.com/user-attachments/assets/4aa7a546-c48d-4658-806e-1268059c6c92)
+
+ 
+ <b>14. 상세상품 페이지 - 상단</b>
+ ![image](https://github.com/user-attachments/assets/1376b1c8-37c7-4c3e-9ac5-45228faef78d)
+ - 예약하기 버튼 클릭으로 상담예약이 가능합니다. (로그인 시에만)
+
+ ![image](https://github.com/user-attachments/assets/56922f7c-791a-48d9-9e61-bd810652a537)
+
+ 
+ <b>15. 어드민 부터 대시보드</b>
+ ![image](https://github.com/user-attachments/assets/b5d83838-9e94-4be7-ad31-33632b245bab)
+ - 회사가 보유중인 상품 정보 및 회원정보를 불러오며, 회원 선호도와 비교 분석할 수 있는 그래프로 노출합니다.
+ - 하단 부에는 로그인한 직원의 예약상담 건수를 노출합니다.
+
+
+ <b>16. 회원관리</b>
+ ![image](https://github.com/user-attachments/assets/8cbd3745-9501-42f5-9e2b-df1bd26bf8bd)
+ - 회원 타입에 따라 회원목록/비회원목록으로 구분하였습니다.
+
 
  <b>19. 매물관리 판매상태별 메뉴</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
+ ![image](https://github.com/user-attachments/assets/09dbf3a7-cdc3-4568-bed3-90dc3bbe30bc)
+ - 판매 상태에 따라 목록을 구분하였습니다.
+ - 예약중인 차량에 대해서는 상품제목 클릭 시 상세페이지로 이동하며 즉시 계약서 작성을 가능할 수 있게 합니다.
+
 
  <b>20. 문의 관리</b>
- ![image](https://user-images.githubusercontent.com/63082842/106247390-cf518a80-6252-11eb-8cbd-bf39dfb39a6f.png)
+ ![image](https://github.com/user-attachments/assets/ef0adfc5-93b1-4310-89c7-003cab02801e)
+ - 유저 게시판에 내용을 직원 또는 관리자가 답변이 가능합니다.
+
  
