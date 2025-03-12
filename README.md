@@ -195,7 +195,7 @@ CREATE TABLE reservation_tbl (
 
 # 구현한 기능들
  <b>1. 회원가입</b>
- ![image](https://user-images.githubusercontent.com/63082842/106240752-2e5dd200-6248-11eb-9079-161fdddf2b83.png)
+ [![image](https://user-images.githubusercontent.com/63082842/106240752-2e5dd200-6248-11eb-9079-161fdddf2b83.png)](https://github.com/sunghyun9889/carnex/issues/1#issue-2873112132)
  - 회원가입 시 입력한 비밀번호는 Spring Security으로 인코딩되어 DB에 저장됩니다.    
  
  <b>2. 회원 로그인</b>
