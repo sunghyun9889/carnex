@@ -2,7 +2,7 @@
 
 ### 프로젝트 기간 : 24.07.04 ~ 24.12.13
 ### 프로젝트 수행자 : 조성현(chosh0809@nate.com)
-### 시연 영상 : 
+### 주요 기술 : FlexSlider를 활용한 메인배너, AJAX 비동기식 무한 스크롤 페이징 처리, chart.js 활용한 대시보드 구현
 
 ## 환경
 - Windows 10
@@ -226,7 +226,7 @@ CREATE TABLE reservation_tbl (
  
  <b>7. 전체 차량 페이지</b>
  ![image](https://github.com/user-attachments/assets/0232af7c-303d-465c-90e4-85d11fb8e6aa)
- - 모든 결과를 보여줍니다.
+ - 모든 결과를 보여줍니다. AJAX 비동기 방식으로 무한스크롤 구현
 
 
  <b>8. 게시판 페이지</b>
@@ -267,7 +267,7 @@ CREATE TABLE reservation_tbl (
  
  <b>15. 어드민 부터 대시보드</b>
  ![image](https://github.com/user-attachments/assets/b5d83838-9e94-4be7-ad31-33632b245bab)
- - 회사가 보유중인 상품 정보 및 회원정보를 불러오며, 회원 선호도와 비교 분석할 수 있는 그래프로 노출합니다.
+ - 회사가 보유중인 상품 정보 및 회원정보를 불러오며, 회원 선호도와 비교 분석할 수 있는 그래프로 노출합니다. (chart.js 활용)
  - 하단 부에는 로그인한 직원의 예약상담 건수를 노출합니다.
 
 
